@@ -9,6 +9,24 @@ include('./config/db/mysql/db.conf');
 $username = $this -> input -> post['txtUsername'];
 $password = $this -> input -> post['txtPassword'];
 
+$bahanPerulangan = 123456789;
+$bahanPerulangan = str_shuffle($bahanPerulangan);
+$randSesi = 0;
+for(i=0; i < $bahanPerulangan; $i++){
+  $randSesi++;
+  global $randSesi;
+}
+
+function getDataUser($randSesi){
+  $dataLogin['browser'] =  $_SERVER['HTTP_USER_AGENT'];
+  $dataLogin['server'] = $_SERVER['REMOTE_ADDR'];
+  $dataLogin['tanggal'] = date("Y/m/d");
+  $dataLogin['waktu'] = date("h:i:sa");
+  
+  return($dataLogin);
+  
+}
+
 //change password to md5
 $password = md5($password);
 
