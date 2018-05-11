@@ -16,4 +16,13 @@ $password = md5($password);
 $kCheckUser = $con -> query("SELECT id FROM tbl_user WHERE username='$username' AND password='$password';");
 $totalUser = mysqli_num_rows($kCheckUser);
 
+//create response variable
+$response = array['$class','data'];
+if($totalUser <= 1){
+$response[0] = "warning";
+$response[1] = "Login gagal!!";
+  
+}else{
+
+}
 ?>
