@@ -17,12 +17,14 @@ $kCheckUser = $con -> query("SELECT id FROM tbl_user WHERE username='$username' 
 $totalUser = mysqli_num_rows($kCheckUser);
 
 //create response variable
-$response = array['$class','data'];
+$response = array['$class','data','action'];
 if($totalUser <= 1){
 $response[0] = "warning";
-$response[1] = "Login gagal!!";
-  
+$response[1] = "Login Gagal!!";
+$response[2] = "./index.php"; 
 }else{
-
+$response[0] = "success";
+$response[1] = "Login Berhasil";
+$response[2] = "./dasbor.php";  
 }
 ?>
