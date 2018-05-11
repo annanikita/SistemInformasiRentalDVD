@@ -1,6 +1,6 @@
 <?php
 //check login file
-//coders : Aditia Darma Nasution
+//coders : - Aditia - Nadia - Setia
 
 session_start();
 include('./config/db/mysql/db.conf');
@@ -23,7 +23,7 @@ function getDataUser($randSesi){
   $dataLogin['tanggal'] = date("Y/m/d");
   $dataLogin['waktu'] = date("h:i:sa");
   
-  return($dataLogin);
+  return($dataLogin as $loginData);
   
 }
 
@@ -44,5 +44,7 @@ $response[2] = "./index.php";
 $response[0] = "success";
 $response[1] = "Login Berhasil";
 $response[2] = "./dasbor.php";  
+$_SESSION['username'] =  $username;  
 }
+
 ?>
