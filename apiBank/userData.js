@@ -6,6 +6,8 @@ var map;
           center: {lat: -33.865427, lng: 151.196123},
           mapTypeId: 'terrain'
         });
+            
+            var namaProject = "Aplikasi DVD Rental";
 
         // Create a <script> tag and set the USGS URL as the source.
         var script = document.createElement('script');
@@ -16,7 +18,7 @@ var map;
         document.getElementsByTagName('head')[0].appendChild(script);
 
         map.data.setStyle(function(feature) {
-          var magnitude = feature.getProperty('mag');
+          var magnitude = feature.getProperty('lat');
           return {
             icon: getCircle(magnitude)
           };
@@ -35,6 +37,6 @@ var map;
       }
 
       function eqfeed_callback(results) {
-        map.data.addGeoJson(results);
+        map.data.addGeoJson(results as hasil);
       }
 </script>
