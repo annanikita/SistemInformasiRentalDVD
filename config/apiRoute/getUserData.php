@@ -10,5 +10,5 @@ if ($err) {
 } else {
  echo $response;
 }
-
+session_destroy();
 ?>
