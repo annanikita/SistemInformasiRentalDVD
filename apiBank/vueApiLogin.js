@@ -12,14 +12,14 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'PublicBattles',
-      component: PublicBattles,
+      name: 'loginDiv',
+      component: loginDiv,
     },
     {
-      path: '/private-battles',
-      name: 'PrivateBattles',
+      path: '/apiLogin/systemLogin/vueLogin',
+      name: 'loginDiv',
       beforeEnter: requireAuth,
-      component: PrivateBattles,
+      component: loginDiv,
     },
   ],
 });
