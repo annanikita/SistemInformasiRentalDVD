@@ -1,11 +1,32 @@
 <script>
 var map;
+
+const VuePlugin = {
+  install: function (Vue) {
+    if (Vue._bootstrap_vue_installed) {
+      return
+    }
+
+    Vue._bootstrap_vue_installed = true
+
+    // Register component plugins
+    for (let plugin in components) {
+      Vue.use(components[plugin])
+    }
+
+    // Register directive plugins
+    for (let plugin in directives) {
+      Vue.use(directives[plugin])
+    }
+  }
+}
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
           zoom: 2,
           center: {lat: -33.865427, lng: 151.196123},
           mapTypeId: 'terrain'
         });
+            
             
             var namaProject = "Aplikasi DVD Rental";
 
