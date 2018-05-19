@@ -1,6 +1,6 @@
 # SistemInformasiRentalDVD
 Aplikasi sistem rental dvd berbasis web.
-<div style='text-align:center;'>
+<div style='text-align:center;width:100px;'>
 <img src='http://www.indonesiayp.com/img/id/j/1524588265-50-pixelkreatif.jpg'>
   </div>
 !!!--- Team Builder ---!!!
