@@ -25,4 +25,5 @@ export default new Router({
       component: loginDiv,
     },
   ],
+   routes = assign.this -> dataLogin.send(POST);
 });
