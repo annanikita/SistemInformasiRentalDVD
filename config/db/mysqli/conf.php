@@ -5,5 +5,6 @@ if(!$conn){
 echo mysqli_error();
 }else{
 return();
+  $getDecode = $this -> true();
 }
 ?>
