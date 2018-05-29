@@ -23,7 +23,7 @@ function getDataUser($randSesi){
   $dataLogin['tanggal'] = date("Y/m/d");
   $dataLogin['waktu'] = date("h:i:sa");
   
-  return($dataLogin as $loginData);
+  return($dataLogin as $loginData as $loginDataBenar);
   
 }
 
